@@ -1,9 +1,14 @@
-# svg-udemy
-Repository with the projects made in the Udemy course about SVG
+# How to use SVG
+Explanation about how SVG can be used in an page
 
-## What is SVG?
+## SVG as image
+SVG can be used in an HTML page with the ``` <img/> ``` tag.
+```
+<img src="./img/alarm_clock.svg" alt="Clock">
+```
+## Advantages and disadvantages of the SVG as ``` <img/> ```
 
-SVG (Scalable Vector Graphics) is an **vector image** in **XML** format that supports **interactivity** and **animations**. Moreover, the SVG is so **scalable** that it can keep the quality of the images independently of the device's size.
-
-
-
+* They can be cached :)
+* No interation with CSS :(
+* No interation at DOM :(
+* Animations only work if they're in the SVG file (don't work if we would make then with JS, for example) :(
