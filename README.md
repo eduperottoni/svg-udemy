@@ -1,9 +1,9 @@
-# svg-udemy
-Repository with the projects made in the Udemy course about SVG
+# SVG Structure
+SVG files have a specific structure
 
-## What is SVG?
+## Cartesian Plane
+Is important to know how the cartesian plane works.
 
-SVG (Scalable Vector Graphics) is an **vector image** in **XML** format that supports **interactivity** and **animations**. Moreover, the SVG is so **scalable** that it can keep the quality of the images independently of the device's size.
-
+![Cartesian plane with some spots](./assets/img/cartesian-plane.png)
 
 
