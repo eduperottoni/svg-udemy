@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ViewPort and ViewBox</title>
+
+  <link rel="stylesheet" href="./../assets/css/style.css">
+</head>
+<body>
+  <h1>ViewPort and ViewBox</h1>
+
+  <svg width="300px" height="100px" style="border:2px solid red; margin:0 auto; display:block;">
+    <circle r="25" cx="150" cy="50"/>
+  </svg>
+  <br><br>
+  <svg width="300px" height="100px" viewBox="0 0 600 200" style="border:2px solid red; margin:0 auto; display:block;">
+    <circle r="25" cx="150" cy="50"/>
+  </svg>
+  <br><br>
+  <svg width="300px" height="100px" viewBox="-150 -50 600 200" style="border:2px solid red; margin:0 auto; display:block;">
+    <circle r="25" cx="150" cy="50"/>
+  </svg>
+  <br><br>
+  <svg width="300px" height="100px" viewBox="0 0 150 50" style="border:2px solid red; margin:0 auto; display:block;">
+    <circle r="25" cx="150" cy="50"/>
+  </svg>
+</body>
+</html>
