@@ -58,3 +58,97 @@ There are some values accepted:
     * meet (cover the max the image can, without distortion)
     * slice (cut the image if it pass the viewport). The cut is done in the smallest measure according to the image proportion.
 
+## Basic SVG forms
+### Rect
+```
+<rect x="" y="" width="" height=""/>
+```
+![rect](./assets/img/rect.png)
+### Circle
+```
+<circle r="" cx="" cy=""/>
+```
+![circle](./assets/img/circle.png)
+### Ellipse
+```
+<ellipse rx="" ry="" cx="" cy=""/>
+```
+![ellipse](./assets/img/ellipse.png)
+### Line
+```
+<line x1="10" y1="50" x2="100" y2="75" stroke="#000" stroke-width="3"/>
+```
+![line](./assets/img/line.png)
+## Polyline
+```
+<polyline points="0,50 50,50 50,100 100,100 100,150 150,150" fill="transparent" stroke="#000" stroke-width="3"/>
+```
+![polyline](./assets/img/polyline.png)
+
+## Polygon
+```
+<polygon points="30,30 60,30 80,50 80,80 60,100 30,100" fill="#152463" stroke="#F00" stroke-width="2"/>
+```
+![polygon](./assets/img/polygon.png)
+## Path
+This is the most complicated basic SVG element.
+There are a lot of caracteristics to pass to this element
+* Moveto (M) (describe the points we wanna in our curve)
+* Lineto (L) (describes a line)
+* Arcs (A) (describes an arch)
+* Closepath (Z) (closes the path, joining its start with its end)
+This caracteristics are declared inside the d property
+```
+<svg>
+  <path 
+    stroke="#000"
+    stroke-width="3"
+    fill="none"
+    d="M40,20 L40,80 A30,30 0 0,0 100,80z"
+  />
+</svg>
+```
+![path](./assets/img/path1.png)
+![path](./assets/img/path2.png)
+
+## Containers Elements
+This kind of element will draw nothing, but envolves the others
+
+### defs
+This container contains <strong>reusable</strong> items. The elements inside it, won't render if not called by the tag ```<use>```
+```
+<svg>
+  <defs>
+    <circle id="my-circle" r="25" cx="150" cy="50"/>
+  </defs>
+
+  <use xlink:href="#my-circle"/>
+  <use xlink:href="#my-circle" x="80" fill="red"/>
+</svg>
+```
+![defs](./assets/img/defs.png)
+### g
+This container agroup similar elements
+```
+<svg>
+  <g fill="red">
+    <circle id="my-circle" r="25" cx="150" cy="50"/>
+    <circle id="my-circle" r="25" cx="250" cy="50"/>
+  </g>
+</svg>
+```
+![group]('./assets/img/group.png')
+### symbol
+Defines an object that will be instantiated 
+through the ```<use>``` and has its own viewBox.
+```
+<svg>
+  <symbol id="my-symbol" viewBox="0 0 600 300">
+    <circle r="25" cx="150" cy="50"/>
+  </symbol>
+
+  <use xlink:href="#my-symbol"/>
+  <use xlink:href="#my-symbol" x="80" fill="red"/>
+</svg>
+```
+![symbol](./assets/img/symbol.png)

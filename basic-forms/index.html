@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Forms</title>
+  <link rel="stylesheet" href="./../assets/css/style.css">
+</head>
+<body>
+  <h1>Basic forms</h1>
+
+  <h2>Rect</h2>
+  <svg>
+    <rect x="0" y="0" width="200" height="100"/>
+  </svg>
+
+  <h2>Circle</h2>
+  <svg>
+    <circle r="50" cx="100" cy="100"/>
+  </svg>
+
+  <h2>Ellipse</h2>
+  <svg>
+    <ellipse rx="100" ry="50" cx="150" cy="50"/>
+  </svg>
+
+  <h2>Line</h2>
+  <svg>
+    <line x1="10" y1="50" x2="100" y2="75" stroke="#000" stroke-width="3"/>
+  </svg>
+
+  <h2>Polyline</h2>
+  <svg>
+    <polyline points="0,50 50,50 50,100 100,100 100,150 150,150" fill="transparent" stroke="#000" stroke-width="3"/>
+  </svg>
+
+  <h2>Polygon</h2>
+  <svg>
+    <polygon points="30,30 60,30 80,50 80,80 60,100 30,100" fill="#152463" stroke="#F00" stroke-width="2"/>
+  </svg>
+
+  <h2>Path</h2>
+  <svg>
+    <path 
+      stroke="#000"
+      stroke-width="3"
+      fill="none"
+      d="M40,20 L40,80 A30,30 0 0,0 100,80z"
+    />
+  </svg>
+
+  <h2>Container Elements</h2>
+
+  <h3>Defs</h3>
+  <svg>
+    <defs>
+      <circle id="my-circle" r="25" cx="150" cy="50"/>
+    </defs>
+
+    <use xlink:href="#my-circle"/>
+    <use xlink:href="#my-circle" x="80" fill="red"/>
+  </svg>
+
+  <h3>Group</h3>
+  <svg>
+    <g fill="red">
+      <circle id="my-circle" r="25" cx="150" cy="50"/>
+      <circle id="my-circle" r="25" cx="250" cy="50"/>
+    </g>
+  </svg>
+
+  <h3>Symbol</h3>
+  <svg>
+    <symbol id="my-symbol" viewBox="0 0 600 300">
+      <circle r="25" cx="150" cy="50"/>
+    </symbol>
+
+    <use xlink:href="#my-symbol"/>
+    <use xlink:href="#my-symbol" x="80" fill="red"/>
+  </svg>
+</body>
+</html>
